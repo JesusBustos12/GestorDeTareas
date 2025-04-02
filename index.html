@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- 
+  PÁGINA PRINCIPAL DEL GESTOR DE TAREAS
+  Estructura básica y secciones principales
+-->
+
+<head>
+  <!-- Configuración básica y enlaces -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tareas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- CABECERA PRINCIPAL -->
+  <header>
+    <h1>Gestor de Tareas</h1>
+
+    <!-- CONTENEDOR DE BOTONES DE NAVEGACIÓN -->
+    <div id="iconos" style="text-align: center;">
+      <!-- Botón para mostrar sección de tareas existentes -->
+      <button id="btn-mis-tareas">
+        <span>Mis Tareas</span>
+      </button>
+
+      <!-- Botón para mostrar formulario de nueva tarea -->
+      <button id="btn-nuevas-tareas">
+        <span>Nuevas Tareas</span>
+      </button>
+    </div>
+
+    <!-- SECCIÓN DE REDES SOCIALES -->
+    <div id="redes-sociales">
+      <!-- Enlaces con iconos (rutas relativas) -->
+      <a href="https://github.com/JesusBustos12?tab=repositories" target="_blank">
+        <img src="Elementas para la pagina\Iconos\github.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/jesus-bustos-arizmendi-325329283/" target="_blank">
+        <img src="Elementas para la pagina\iconos\linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.occ.com.mx/curriculo" target="_blank">
+        <img src="Elementas para la pagina\iconos\birrete.png" alt="OCC">
+      </a>
+    </div>
+
+    <!-- ICONOS DE ACCIÓN -->
+    <div style="display: none;">
+      <img id="icono-editar" src="Elementas para la pagina\iconos\editar.png" alt="Editar">
+      <img id="icono-eliminar" src="Elementas para la pagina\iconos\eliminar.png" alt="Eliminar">
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main style="margin-top: 0;">
+    <!-- SECCIÓN: LISTADO DE TAREAS (oculta inicialmente) -->
+    <section id="mis-tareas" style="display: none;">
+      <h2>Mis Tareas</h2>
+
+      <!-- LISTA DINÁMICA DE TAREAS (se llena con JS) -->
+      <ul id="tareas"></ul>
+    </section>
+
+    <!-- SECCIÓN: FORMULARIO DE NUEVA TAREA (oculta inicialmente) -->
+    <section id="nuevas-tareas" style="display: none;">
+      <h2>Nueva Tarea</h2>
+      <form id="formulario-tarea">
+        <!-- Campos del formulario -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion"></textarea>
+
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" name="categoria" required>
+        </select>
+
+        <label for="etiquetas">Etiquetas:</label>
+        <select id="etiquetas" name="etiquetas" required>
+        </select>
+
+        <label for="fecha-limite">Fecha límite:</label>
+        <input type="date" id="fecha-limite" name="fecha-limite">
+
+        <button type="submit">Crear Tarea</button>
+      </form>
+    </section>
+
+    <!-- MODAL DE EDICIÓN (oculto por defecto) -->
+    <div id="modal-editar-tarea" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        <h2>Editar Tarea</h2>
+        <form id="formulario-editar-tarea">
+          <!-- Campos dinámicos (se llenan con JS) -->
+          <input type="hidden" id="editar-id" name="id">
+          <label for="editar-nombre">Nombre:</label>
+          <input type="text" id="editar-nombre" name="nombre" required>
+
+          <label for="editar-descripcion">Descripción:</label>
+          <textarea id="editar-descripcion" name="descripcion"></textarea>
+
+          <label for="editar-categoria">Categoría:</label>
+          <select id="editar-categoria" name="categoria" required>
+          </select>
+
+          <label for="editar-etiquetas">Etiquetas:</label>
+          <select id="editar-etiquetas" name="etiquetas" required>
+          </select>
+
+          <label for="editar-fecha-limite">Fecha límite:</label>
+          <input type="date" id="editar-fecha-limite" name="fecha-limite">
+
+          <button type="submit">Guardar Cambios</button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Script principal (carga diferida) -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>

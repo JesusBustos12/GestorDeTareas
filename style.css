@@ -1,0 +1,366 @@
+/* ==========================================================================
+   Estilos Base y Configuración General
+   ========================================================================== */
+body {
+    font-family: MV boli;
+    margin: 0;
+    padding: 0;
+    background-color: #a9a8a8eb;
+    color: #333;
+    font-size: 8px;
+}
+
+/* ==========================================================================
+   Encabezado y Navegación
+   ========================================================================== */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 35px;
+    margin-block: 0px;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Contenido Principal
+   ========================================================================== */
+main {
+    padding: 0px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #f0f0f0a6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    font-size: 20px;
+}
+
+/* ==========================================================================
+   Sección de Tareas
+   ========================================================================== */
+#mis-tareas {
+    padding: 20px;
+}
+
+#nuevas-tareas {
+    padding: 20px;
+}
+
+/* Estilos para la lista de tareas */
+#tareas {
+    list-style: none;
+    padding: 0;
+}
+
+#tareas li {
+    background-color: hsl(0deg 60.91% 49.72% / 17%);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.iconos-tarea {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.iconos-tarea img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.iconos-tarea img:hover {
+    opacity: 0.7;
+}
+
+#tareas li h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 20px;
+    padding-right: 60px;
+}
+
+#tareas li p {
+    margin: 3px 0;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   Formularios y Campos de Entrada
+   ========================================================================== */
+#nueva-tarea label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#nueva-tarea input,
+#nueva-tarea textarea,
+#nueva-tarea select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+#formulario-tarea label,
+#formulario-tarea input,
+#formulario-tarea textarea,
+#formulario-tarea select {
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 15px;
+}
+
+/* Campos de descripción */
+#descripcion,
+#editar-descripcion {
+    width: 100%;
+    height: 150px;
+}
+
+/* Campos de etiquetas */
+#etiquetas,
+#editar-etiquetas {
+    width: 100%;
+    height: 20px;
+}
+
+/* ==========================================================================
+   Filtros
+   ========================================================================== */
+#filtros label,
+#filtros input,
+#filtros option,
+#filtros select {
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   Modal y Ventanas Emergentes
+   ========================================================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-contenido {
+    background-color: #f0f0f0d1;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.modal-contenido h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos para el formulario dentro del modal */
+#formulario-editar-tarea label,
+#formulario-editar-tarea input,
+#formulario-editar-tarea textarea,
+#formulario-editar-tarea select {
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 15px;
+}
+
+#formulario-editar-tarea textarea {
+    width: 100%;
+    height: 150px;
+    resize: vertical;
+}
+
+#formulario-editar-tarea select {
+    width: 100%;
+    height: 20px;
+}
+
+.cerrar-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: #af4c4c;
+    text-decoration: none;
+}
+
+/* Estilo específico para el botón de guardar cambios */
+#formulario-editar-tarea button[type="submit"] {
+    margin-block: 15px;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Botones
+   ========================================================================== */
+button {
+    background-color: #af4c4c;
+    color: white;
+    padding: 12px 23px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Estilo específico para el botón de crear tarea */
+#formulario-tarea button[type="submit"] {
+    margin-block: 15px;
+}
+
+/* Estilo específico para los botones de navegación */
+#iconos button {
+    margin-block: 15px;
+}
+
+/* ==========================================================================
+   Redes Sociales
+   ========================================================================== */
+#redes-sociales {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#redes-sociales a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+#redes-sociales a img {
+    width: 33px;
+    height: 33px;
+}
+
+/* ==========================================================================
+   Media Queries para Responsividad
+   ========================================================================== */
+@media screen and (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    #nueva-tarea input,
+    #nueva-tarea textarea,
+    #nueva-tarea select {
+        padding: 5px;
+    }
+}
+
+/* ==========================================================================
+   Mensaje de error de conexión
+   ========================================================================== */
+.error-conexion {
+    background-color: #ffeeee;
+    border: 2px solid #ff4c4c;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 80%;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    font-family: MV boli;
+}
+
+.error-conexion h3 {
+    color: #af4c4c;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.error-conexion p, .error-conexion ul {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.error-conexion ul {
+    padding-left: 20px;
+}
+
+.error-conexion li {
+    margin-bottom: 8px;
+}
+
+.error-conexion button {
+    background-color: #af4c4c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.error-conexion button:hover {
+    background-color: #963c3c;
+}
