@@ -109,15 +109,15 @@ function mostrarTareas() {
         const iconosDiv = document.createElement("div");
         iconosDiv.className = "iconos-tarea";
 
-        // Crear icono de editar
+       // Crear icono de editar
         const iconoEditar = document.createElement("img");
-        iconoEditar.src = "Elementas para la pagina/iconos/editar.png";
+        iconoEditar.src = "Iconos/editar.png";
         iconoEditar.alt = "Editar";
         iconoEditar.onclick = () => editarTarea(index);
 
         // Crear icono de eliminar
         const iconoEliminar = document.createElement("img");
-        iconoEliminar.src = "Elementas para la pagina/iconos/eliminar.png";
+        iconoEliminar.src = "Iconos/eliminar.png";
         iconoEliminar.alt = "Eliminar";
         iconoEliminar.onclick = () => eliminarTarea(index);
 
