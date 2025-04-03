@@ -39,14 +39,14 @@ Una aplicación web intuitiva para gestionar tareas y actividades diarias.
 ## Instalación local
 
 ```bash
-git clone https://github.com/JesusBustos12/GestorDeTareas.git
+git clone  https://jesusbustos12.github.io/GestorDeTareas/
 cd GestorDeTareas
 # Abrir index.html en cualquier navegador moderno
 
 ## ¿Cómo usar el Gestor de Tareas?
 1. **Abre tu navegador** (Chrome, Firefox, Edge, etc.)
 2. **Visita este enlace directo**:  
-   [https://jesusbustos12.github.io/GestorDeTareas]
+   [ https://jesusbustos12.github.io/GestorDeTareas/]
 3. **¡Listo!** Verás:
    - Botón "Mis Tareas" para ver tu lista
    - Botón "Nuevas Tareas" para crear actividades
@@ -54,7 +54,7 @@ cd GestorDeTareas
 
 ### Ejecutar en tu computadora (versión local)
 1. **Descarga el proyecto**:
-   - Haz clic en el botón verde "Code" en [GitHub](https://github.com/JesusBustos12/GestorDeTareas)
+   - Haz clic en el botón verde "Code" en [GitHub]( https://jesusbustos12.github.io/GestorDeTareas/)
    - Selecciona "Download ZIP"
    - Guarda el archivo en tu carpeta preferida
 
